@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirtableConnector.Core", "AirtableConnector.Core\AirtableConnector.Core.csproj", "{B9DB9705-15C5-4550-A5B4-D13D08F23B58}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirtableConnector.Tests", "AirtableConnector.Tests\AirtableConnector.Tests.csproj", "{AA937E41-36BF-40B4-9C51-F6E1BE08EFAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9DB9705-15C5-4550-A5B4-D13D08F23B58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9DB9705-15C5-4550-A5B4-D13D08F23B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9DB9705-15C5-4550-A5B4-D13D08F23B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9DB9705-15C5-4550-A5B4-D13D08F23B58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA937E41-36BF-40B4-9C51-F6E1BE08EFAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA937E41-36BF-40B4-9C51-F6E1BE08EFAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA937E41-36BF-40B4-9C51-F6E1BE08EFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA937E41-36BF-40B4-9C51-F6E1BE08EFAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B88BBFD-5E4E-440B-BC8B-F8CBAC115D70}
+	EndGlobalSection
+EndGlobal
