@@ -1,5 +1,8 @@
 ﻿using AirtableApiClient;
 using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
+using System.Text.Json.Nodes;
 
 namespace AirtableConnector.Core
 {
@@ -7,16 +10,26 @@ namespace AirtableConnector.Core
 	{
 		public AirtableBase Base { get; set; }
 
-		public AirtableGetter(string baseId, string apiKey)
+		public AirtableGetter(string baseId, string apiKeyFile)
 		{
-			Base = new AirtableBase(apiKey, baseId);
+			Base = new AirtableBase(ReadApiKey(apiKeyFile), baseId);
 		}
 
-		public Dictionary<string, List<string>> RetrieveDataFromTables()
+		private static string ReadApiKey(string apiKeyFile, string key = "Airtable")
+		{
+			// Read the entire file
+			string json = File.ReadAllText(apiKeyFile);
+
+			// Parse the JSON data into a C# object
+			JsonSerializerOptions options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+			JsonObject data = JsonSerializer.Deserialize<JsonObject>(json, options);
+			return data[key].ToString();
+		}
+
+		public Dictionary<string, List<string>> RetrieveDataFromTables(string tableName)
 		{
 			Dictionary<string, List<string>> data = new();
-			Base.ListRecords("Projects");
-			Base.ListRecords("Clients");
+			Base.ListRecords(tableName);
 			return data;
 		}
 
