@@ -19,4 +19,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AirtableConnector.Core\AirtableConnector.Core.csproj" />
+  </ItemGroup>
+
 </Project>

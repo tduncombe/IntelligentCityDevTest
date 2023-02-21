@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Airtable" Version="1.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
   </ItemGroup>
 
 </Project>
