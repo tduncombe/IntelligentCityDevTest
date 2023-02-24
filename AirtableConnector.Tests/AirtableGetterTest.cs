@@ -1,12 +1,15 @@
 using AirtableConnector.Core;
 using System.Collections.Generic;
+using System.IO;
 using Xunit;
 
 namespace AirtableConnector.Tests
 {
 	public class AirtableGetterTest
 	{
-		AirtableGetter Getter { get; set; } = new AirtableGetter("apphruxl9mXWH7QJJ", "API_KEY_FILEPATH");
+		// assume secrets.json as been copied to output directory
+		AirtableGetter Getter { get; set; } = new AirtableGetter("apphruxl9mXWH7QJJ",
+			Path.Combine(Directory.GetCurrentDirectory(), "secrets.json"));
 
 		[Fact]
 		public void RetrieveDataFromProjectsTableTest()
