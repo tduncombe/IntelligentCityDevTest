@@ -29,6 +29,10 @@ namespace AirtableConnector.Tests
 		public AirtableGetterTest(ILogger<AirtableGetter> logger)
 		{
 			_logger = logger;
+			// somewhat overkill to use lazy loading but this allows us to avoid 
+			// our test harness exploding before a test has been run in the case that
+			// secrets.json is not in the correct place, it also means the constructor  
+			// is only ever run once across the various tests.
 			_lazyAirtable = new Lazy<AirtableGetter>(() =>
 				new AirtableGetter(
 					"apphruxl9mXWH7QJJ",

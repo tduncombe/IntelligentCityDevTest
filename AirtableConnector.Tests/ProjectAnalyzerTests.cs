@@ -41,6 +41,14 @@ namespace AirtableConnector.Tests
         }
     }
 }
+
+///<summary>
+/// I've chosen to use a fake object pattern for mocking dependencies
+/// as opposed to a mocking framework. I have found that a lot of the times something like this
+/// which allows a test to easily ask for the data it wants to receive from the data layer
+/// is a lot more readable and quicker to code than the equivalent functionality using Moq.
+/// Make it internal so we don't have any 'real' code using the fake repo.
+///</summary>
 internal class FakeRepository : IRepository
 {
     public List<Project> ProjectsByCity { get; set; }
