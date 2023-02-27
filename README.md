@@ -1,14 +1,7 @@
 # IntelligentCityDevTest
 
-## Preparation
-- Clone the repository and make a fork of it.
-- Change the forked repository's visibility to public.
-- Share the forked repository with @IC-kaizhu, @nicholas-intelligentcity, and @nicholasmartino-ic.
+I chose to modify the test methods quite a lot. I wanted to use the assignment as a way to demonstrate unit testing vs integration testing. I have left an example of the dictionary method implemented in the way that I did before refactoring.
 
-## Assignments
-- Finish the RetrieveDataFromTables method that retrieves data from both tables in the "Software Sandbox" base of Airtable, and returns it in a dictionary format.
-- Write another method to return data only for projects located in a certain city.
-- Ensure that both methods pass all tests.
-- Enhance the unit tests to further validate the methods.
-- Feel free to modify any existing code as necessary.
-- Add appropriate documentation to your code as needed.
+As such I've made some changes that feel a little shoehorned in, or unnecessarily complicated for such a small task.
+
+I chose to comment the code in a different manner than I usually would in production code. I used more verbose comments than I usually would to explain my thought process and possible modifications/alternatives.
