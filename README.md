@@ -12,3 +12,7 @@ By default for me that is AirtableConnector.Tests/bin/Debug/net5.0/secrets.json
 All tests pass using `dotnet test` as well as testing using visual studio code's test explorer.
 
 Please let me know if something doesn't run correctly for you!
+
+## Github Action
+
+TODO: test new action
